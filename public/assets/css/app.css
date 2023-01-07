@@ -1,0 +1,242 @@
+@font-face {
+    font-family: Chilanka;
+    src: url('..//css/Chilanka-Regular.ttf')
+}
+
+body{
+    font-family: Chilanka;
+}
+
+.menu-container {
+    width: 90%;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 1);
+}
+
+.meal-menu{
+    min-height: 100vh; 
+    max-height: 100vh;
+    border-right: 0.5px solid #b8b8b8;
+    background-color: #f3f3f3;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-top: 1em;
+    display: block;
+}
+
+.list-group-item{
+    font-size: 1.5em;
+    color: #838383;
+}
+
+.list-group-item:hover{
+    color: #111;
+}
+
+.list-group-item:active{
+    color: #111;
+}
+
+.product-container {
+    min-height: 100vh;
+}
+
+.meal-description {
+    padding: 10px;
+    height: 80px;
+    background-color: #f3f3f3;
+}
+
+.category-name {
+    font-size: 2em;
+}
+
+.category-sizes {
+    font-size: smaller;
+}
+
+.meal-wrapper {
+    padding: 0;
+    margin: 2rem;
+    margin-left: 3rem;
+    height: 160px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.meal-wrapper:hover {
+    border-color: #e5e7eb;
+}
+
+.meal-info {
+    float: left;
+    padding-left: 1rem;
+    width: 55%;
+}
+
+.meal-image-container {
+    float: left;
+    width: 35%;
+}
+
+.meal-image {
+    float: right;
+    border-radius: 15%;
+}
+
+.meal-addbutton {
+    border: 2px solid #e5e7eb;
+    float: right;
+    font-size: .75rem;
+    display: flex;
+    line-height: 1rem;
+    border-radius: .375rem;
+    right: 0px;
+    top: 0px;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #b8b8b8;
+}
+
+.meal-addbutton a {
+    text-decoration: none;
+}
+
+.meal-addbutton:hover {
+    background-color: #838383;
+}
+
+.addbutton {
+    width: 1rem;
+    height: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+}
+
+.contact-container {
+    width: 550px;
+    padding: 30px;
+    margin: auto;
+    min-height: 100vh;
+    max-height: 100vh;
+    -webkit-box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 1);
+}
+
+.contact-container h2 {
+    text-align: center;
+}
+
+.contact-info {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    text-align: left;
+    padding-bottom: 3rem;
+}
+
+.contact-info img {
+    margin-right: 10px;
+}
+
+.contact-info img:nth-child(2) {
+    margin-left: 5px;
+}
+
+.openinghours {
+    font-family:Lucida Console;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    display: block;
+}
+
+.headar {
+    float: center;
+    margin-top:.33em;
+}
+
+.openinghourscontent {
+    width: 100%;
+}
+
+.opening-hours-table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.opening-hours-table tr {
+    width: min-content;
+}
+
+.opening-hours-table tr td:first-child {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.opening-hours-table tr td:nth-child(2) {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.is-open {
+    margin-top: 3rem;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.today {
+    font-weight: 800;
+    background-color: #d3e6eb;
+}
+
+#open-status {
+    font-weight: bold;
+    display: block;
+    text-align:center;
+}
+.openorclosed {
+    font-weight: bold;
+    font-size: large;
+    content: "  ";
+}
+
+.open:after {
+    content:"Otwarte";
+    background-color: green;
+    width: min-content;
+    padding: 1rem;
+    border-radius: 15px;
+}
+.closed:after {
+    content:"Zamknięte";
+    background-color: red;
+    width: min-content;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.map-container {
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-container iframe {
+    width: 500px;
+    height: 250px;
+}

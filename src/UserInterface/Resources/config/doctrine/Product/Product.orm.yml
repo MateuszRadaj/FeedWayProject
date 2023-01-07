@@ -1,0 +1,21 @@
+App\Domain\Product\Product:
+    type: entity
+    table: products
+    id:
+        id:
+            type: uuid
+            column: id
+            generator:
+                strategy: NONE
+    fields:
+        name:
+            type: string
+            column: name
+            nullable: false
+            length: 100
+
+        ingredients:
+            type: text
+            column: ingredients
+            nullable: false
+            length: 250

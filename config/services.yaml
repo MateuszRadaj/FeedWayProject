@@ -1,0 +1,30 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Kernel.php'
+            - '../src/Tests/'
+
+    App\Domain\Product\Repository\: 
+        resource: '../src/Domain/Product/Repository/'
+
+    App\Application\Product\Command\Handler\:
+        resource: '../src/Application/Product/Command/Handler/'
+        tags:
+            - { name: messenger.message_handler, bus: command.bus }
+
+    App\Application\Product\Query\Handler\:
+        resource: '../src/Application/Product/Query/Handler/'
+        tags:
+            - { name: messenger.message_handler, bus: query.bus }

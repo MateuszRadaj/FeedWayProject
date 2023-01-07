@@ -1,0 +1,21 @@
+framework:
+    messenger:
+        default_bus: command.bus
+
+        buses:
+            command.bus:
+                middleware:
+                    - doctrine_transaction
+            query.bus:
+                middleware:
+                    - doctrine_transaction
+
+        transports:
+            sync: 'sync://'
+
+            # Odpowiednia konfiguracja transportu (np poprzez RabbitMQ) pozwoli na
+            # obsługę asynchroniczną command-ów. Tutaj sync z powodu braku zewnętrznych mechanizmów
+            async: 'sync://'
+
+        routing:
+            'App\Application\Product\Command\AddProductCommand': async

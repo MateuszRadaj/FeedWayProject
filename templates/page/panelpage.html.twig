@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<div class="container pt-5">
+
+  {% if success == true %}
+    <div class="alert alert-success mt-3" role="alert">
+      Pomyślnie dodano do bazy danych!
+    </div>
+  {% endif %}
+
+  <form action="{{ path('add_product') }}" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Nazwa produktu:</label>
+      <input type="text" class="form-control" name='name'>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Składniki produktu:</label>
+      <input type="text" class="form-control" name='ingredients'>
+    </div>
+    <input value="DODAJ PRODUKT" type="submit">
+  </form>
+
+
+</div>
+
+{% endblock %}

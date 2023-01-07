@@ -1,0 +1,31 @@
+App\Domain\User\User:
+    type: entity
+    table: users
+    id:
+        id:
+            type: uuid
+            column: id
+            generator:
+                strategy: UNIQUE
+    fields:
+        email:
+            type: string
+            column: email
+            nullable: false
+            unique: true
+            length: 32
+            options:
+                fixed: true
+                comment: User's email addres
+
+        username:
+            type: string
+            column: name
+            nullable: false
+            length: 50
+
+        password:
+            type: string
+            column: password
+            nullable: false
+            length: 255
