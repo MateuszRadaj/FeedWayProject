@@ -9,7 +9,6 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-
 class UserRepository implements UserRepositoryInterface, PasswordUpgraderInterface
 {
     public function __construct(
@@ -26,12 +25,15 @@ class UserRepository implements UserRepositoryInterface, PasswordUpgraderInterfa
     /**
      * @return User[]
      */
-    public function find(): array
+    public function find(int $limit = 0): array
     {
         $queryBuilder = $this->entityManager->createQueryBuilder()
             ->select('p')
             ->from(User::class, 'p');
 
+        if ($limit) {
+            $queryBuilder->setMaxResults($limit);
+        }
 
         return $queryBuilder->getQuery()->execute();
     }

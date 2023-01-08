@@ -3,10 +3,11 @@ App\Domain\User\User:
     table: users
     id:
         id:
-            type: uuid
+            type: integer
             column: id
+            nullable: false
             generator:
-                strategy: UNIQUE
+                strategy: IDENTITY
     fields:
         email:
             type: string
@@ -22,10 +23,15 @@ App\Domain\User\User:
             type: string
             column: name
             nullable: false
-            length: 50
+            length: 60
 
         password:
             type: string
             column: password
             nullable: false
-            length: 255
+            length: 100
+
+        roles:
+            type: array
+            nullable: false
+            column: roles

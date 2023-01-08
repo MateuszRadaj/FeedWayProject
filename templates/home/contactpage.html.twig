@@ -1,0 +1,76 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<div class="contact-container ">
+    <h2>FeedWay - najlepsze jedzenie</h2>
+
+    <div class="is-open">
+        <span id="open-status"><small class="openorclosed"></small></span>
+    </div>
+    <div class="contact-info">
+        <img src="{{ asset('assets/images/address.svg') }}" alt="Adres: " width="25px"> <i>ul. Powstańców Wielkopolskich 1</i> </br></br>
+        <img src="{{ asset('assets/images/phone-call.svg') }}" alt="Telefon: " width="20px"> <i> +48 500 699 543</i>
+    </div>
+    <hr>
+    <section class="openinghours">
+        <div class="openinghourscontent">
+            <div class="header">
+                <h2>Godziny otwarcia</h2>
+            </div>
+            <table class="opening-hours-table">
+                <tr id="Monday" itemprop="openingHours" title="Open Monday at 9am to 6pm">
+                    <td>Poniedziałek</td>
+                    <td class="opens">11:00</td>
+                    <td>-</td>
+                    <td class="closes">23:00</td>
+                </tr>
+                <tr id="Tuesday" itemprop="openingHours" title="Open Tuesday at 9am to 6pm">
+                    <td>Wtorek</td>
+                    <td class="opens">11:00</td>
+                    <td>-</td>
+                    <td class="closes">23:00</td>
+                </tr>
+                <tr id="Wednesday" itemprop="openingHours" title="Open Wednesday at 9am to 6pm">
+                    <td>Środa</td>
+                    <td class="opens">11:00</td>
+                    <td>-</td>
+                    <td class="closes">23:00</td>
+                </tr>
+                <tr id="Thursday" itemprop="openingHours" title="Open Thursday at 9am to 8pm">
+                    <td>Czwartek</td>
+                    <td class="opens">11:00</td>
+                    <td>-</td>
+                    <td class="closes">23:00</td>
+                </tr>
+                <tr id="Friday" itemprop="openingHours" title="Open Friday at 9am to 6pm">
+                    <td>Piątek</td>
+                    <td class="opens">11:00</td>
+                    <td>-</td>
+                    <td class="closes">23:00</td>
+                </tr>
+                <tr id="Saturday" itemprop="openingHours" title="Open Saturday at 10am to 6pm">
+                    <td>Sobota</td>
+                    <td class="opens">11:00</td>
+                    <td>-</td>
+                    <td class="closes">23:00</td>
+                </tr>
+                <tr id="Sunday" itemprop="openingHours" title="Open Sunday at 11am to 4pm">
+                    <td>Niedziela</td>
+                    <td class="opens">12:00</td>
+                    <td>-</td>
+                    <td class="closes">22:00</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <hr>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.1572894922624!2d16.922447811931715!3d52.40382549399226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b3a0516226f%3A0x26be04413da8a5e1!2sPowsta%C5%84c%C3%B3w%20Wielkopolskich%201%2C%2061-891%20Pozna%C5%84!5e0!3m2!1spl!2spl!4v1673028988156!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+</div>
+
+{% endblock %}

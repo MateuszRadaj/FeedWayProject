@@ -3,10 +3,10 @@ App\Domain\Product\Product:
     table: products
     id:
         id:
-            type: uuid
+            type: string
             column: id
-            generator:
-                strategy: NONE
+            length: 100
+    
     fields:
         name:
             type: string
@@ -19,3 +19,8 @@ App\Domain\Product\Product:
             column: ingredients
             nullable: false
             length: 250
+        
+        price:
+            type: float
+            column: price
+            nullable: false

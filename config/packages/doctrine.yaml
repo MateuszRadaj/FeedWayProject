@@ -15,3 +15,21 @@ doctrine:
                 type: yml
                 dir: '%kernel.project_dir%/src/UserInterface/Resources/config/doctrine/Product'
                 prefix: 'App\Domain\Product'
+
+            App\Domain\User:
+                is_bundle: false
+                type: yml
+                dir: '%kernel.project_dir%/src/UserInterface/Resources/config/doctrine/User'
+                prefix: 'App\Domain\User'
+
+            App\Domain\Order:
+                is_bundle: false
+                type: yml
+                dir: '%kernel.project_dir%/src/UserInterface/Resources/config/doctrine/Order'
+                prefix: 'App\Domain\Order'
+
+            App\Domain\OrderItem:
+                is_bundle: false
+                type: yml
+                dir: '%kernel.project_dir%/src/UserInterface/Resources/config/doctrine/OrderItem'
+                prefix: 'App\Domain\OrderItem'

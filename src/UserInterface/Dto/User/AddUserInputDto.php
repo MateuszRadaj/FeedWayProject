@@ -15,9 +15,8 @@ class AddUserInputDto
     public string $username;
 
     #[Assert\NotBlank]
-    #[Assert\Length(min: 3)]
+    #[Assert\Length(min: 6)]
     public string $password;
 
-    
     public array $roles = [];
 }

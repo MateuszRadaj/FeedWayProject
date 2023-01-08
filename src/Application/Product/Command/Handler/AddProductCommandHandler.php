@@ -17,12 +17,13 @@ class AddProductCommandHandler
 
     public function __invoke(AddProductCommand $command): void
     {
-        // Tutaj można użyć buildera do stworzenia produktu wraz z cenami
         $productId = Uuid::v6();
+        $productId = Uuid::fromString($productId);
 
         $product = new Product(
             $productId,
             $command->product->name,
+            $command->product->price,
             $command->product->ingredients
         );
 

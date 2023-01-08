@@ -19,6 +19,15 @@ services:
     App\Domain\Product\Repository\: 
         resource: '../src/Domain/Product/Repository/'
 
+    App\Infrastructure\Order\Repository\: 
+        resource: '../src/Infrastructure/Order/Repository/'
+
+    App\Infrastructure\OrderItem\Repository\: 
+        resource: '../src/Infrastructure/OrderItem/Repository/'
+
+    App\Domain\User\Repository\: 
+        resource: '../src/Domain/User/Repository/'
+
     App\Application\Product\Command\Handler\:
         resource: '../src/Application/Product/Command/Handler/'
         tags:
@@ -28,3 +37,8 @@ services:
         resource: '../src/Application/Product/Query/Handler/'
         tags:
             - { name: messenger.message_handler, bus: query.bus }
+
+    App\Application\User\Command\Handler\:
+        resource: '../src/Application/User/Command/Handler/'
+        tags:
+            - { name: messenger.message_handler, bus: command.bus }

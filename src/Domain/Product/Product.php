@@ -6,23 +6,27 @@ use Symfony\Component\Uid\Uuid;
 
 class Product
 {
-    private Uuid $id;
+    private string $id;
 
     private string $name;
 
     private string $ingredients;
 
+    private float $price;
+
     public  function __construct(
-        Uuid $id,
+        string $id,
         string $name,
+        float $price,
         string $ingredients,
     ) {
         $this->id = $id;
         $this->name = $name;
+        $this->price = $price;
         $this->ingredients = $ingredients;
     }
 
-    public function getId(): Uuid
+    public function getId(): string
     {
         return $this->id;
     }
@@ -47,6 +51,18 @@ class Product
     public function setIngredients(string $ingredients): self
     {
         $this->ingredients = $ingredients;
+
+        return $this;
+    }
+
+    public function getPrice(): string
+    {
+        return $this->price;
+    }
+
+    public function setPrice(string $price): self
+    {
+        $this->price = $price;
 
         return $this;
     }

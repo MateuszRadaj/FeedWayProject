@@ -1,0 +1,26 @@
+App\Domain\Order\Order:
+  type: entity
+  table: order
+  id:
+    id:
+      type: integer
+      column: id
+      nullable: false
+      generator:
+        strategy: AUTO
+  
+  fields:
+    status:
+      type: string
+      column: status
+      length: 255
+
+    orderedAt:
+      type: datetime
+      column: ordered_at
+
+  oneToMany:
+    items:
+      targetEntity: App\Domain\OrderItem\OrderItem
+      mappedBy: orderRef
+      cascade: ["persist", "remove"]

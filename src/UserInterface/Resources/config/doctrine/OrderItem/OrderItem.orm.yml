@@ -1,0 +1,27 @@
+App\Domain\OrderItem\OrderItem:
+  type: entity
+  table: orderitem
+  id:
+    id:
+      type: integer
+      column: id
+      nullable: false
+      generator:
+        strategy: AUTO
+
+  fields:  
+    quantity:
+      column: quantity
+      type: integer
+
+  manyToOne:
+    product:
+      targetEntity: App\Domain\Product\Product
+      joinColumn:
+        nullable: false
+    order:
+      targetEntity: App\Domain\Order\Order
+      inversedBy: orderitems
+      joinColumn:
+        name: order_id
+        referencedColumnName: id

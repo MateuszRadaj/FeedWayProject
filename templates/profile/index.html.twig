@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<div class="container">
+  <h1 class="text-center py-5">Witaj, {{ app.user.username }}</h1>
+</div>
+
+<div class="container content-center">
+  <form action="{{ path('add_product') }}" method="post">
+    <label for="name">Nazwa produktu: </label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="ingredients">Składniki produktu: </label><br>
+    <input type="text" id="ingredients" name="ingredients"><br>
+    <label for="ingredients">Cena produktu: </label><br>
+    <input type="number" step="0.01" id="price" name="price"><br>
+  
+    <button type="submit" class="btn btn-dark mt-3">DODAJ</button>
+  </form>
+</div>
+
+
+{% endblock %}

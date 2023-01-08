@@ -13,4 +13,7 @@ class AddProductInputDto
     #[Assert\NotBlank]
     #[Assert\Length(min: 3)]
     public string $ingredients;
+
+    #[Assert\NotBlank]
+    public float $price;
 }

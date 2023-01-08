@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<div class="col-md-8 mx-auto mt-5">
+    <h1 class="mt-4 mt-md-0 text-uppercase">{{ product.name }}</h1>
+    <h2>{{ product.price }} zł</h2>
+    <hr>
+    <b>Skladniki: </b>{{ product.ingredients }} <br>
+    {{ form_start(form, {'attr': {'class': 'mt-4 p-4 bg-light'}}) }}
+    <div class="form-group">
+        {{ form_label(form.quantity) }}
+        {{ form_widget(form.quantity, {
+            'attr': {
+                'class': 'form-control ' ~ (form.quantity.vars.valid ? '' : 'is-invalid')
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.quantity) }}
+        </div>
+    </div>
+    <div class="container">
+        {{ form_widget(form.add, {'attr': {'class': 'btn btn-warning w-40 mt-3'}}) }}
+    </div>
+    {{ form_end(form) }}
+</div>
+
+
+{% endblock %}
